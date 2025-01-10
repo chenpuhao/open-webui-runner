@@ -7,7 +7,7 @@
 ### 使用anaconda
 
 1. 下载chrome.bat以及run_conda.bat
-2. 修改run_conda.bat中的ollama_path以及anaconda_path为你的ollama路径以及anaconda路径（根目录）
+2. 修改run_conda.bat中的ollama_path以及python_path为你的ollama路径以及python路径
 3. 保存并运行run_conda.bat，这将自动运行ollama以及open-webui并在15s后打开127.0.0.1:8080
 
 ### 使用python
