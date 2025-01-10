@@ -1,7 +1,10 @@
 # open-webui-runner
-说明:请先安装open-webui!!!  安装链接：https://docs.openwebui.com/getting-started/quick-start/
+说明:请先安装open-webui!!!  [点我去安装](https://docs.openwebui.com/getting-started/quick-start/)
 
-一个简单的bat脚本，用于一键启动ollama和open-webui
+当你想在本地使用open-webui时，你是否每次都需要打开cmd并且输入一连串的命令？这时候就需要一个bat脚本来一键执行了！
+
+该项目旨在简化open-webui的启动流程，并非很复杂的项目，不喜勿喷，谢谢。
+
 ## 使用说明
 
 ### 使用anaconda
