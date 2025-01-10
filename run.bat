@@ -1,23 +1,23 @@
 @echo off
-set "ollama_path=C:\Users\chenp\AppData\Local\Programs\Ollama\ollama app.exe"
-set "anaconda_path=D:\ProgramData\anaconda3"
+set "ollama_path=path\to\your\ollama app.exe"
+set "anaconda_path=path\to\your\anaconda3"
 set "chrome_path=chrome.bat"  
 
-:: Æô¶¯ Ollama
+:: å¯åŠ¨ Ollama
 start "" "%ollama_path%"
-echo Ollama Æô¶¯Íê³É¡£
+echo Ollama å¯åŠ¨å®Œæˆã€‚
 
-:: Æô¶¯ Chrome ²¢Òş²ØÃüÁîÌáÊ¾·û´°¿Ú
+:: å¯åŠ¨ Chrome å¹¶éšè—å‘½ä»¤æç¤ºç¬¦çª—å£
 start /B "" "%chrome_path%"
-echo ä¯ÀÀÆ÷¼ÆÊ±Æô¶¯Íê³É¡£
+echo æµè§ˆå™¨è®¡æ—¶å¯åŠ¨å®Œæˆã€‚
 
-:: µÈ´ı Ollama Æô¶¯Íê³É£¬¸ù¾İÊµ¼ÊÇé¿öµ÷Õû
+:: ç­‰å¾… Ollama å¯åŠ¨å®Œæˆï¼Œæ ¹æ®å®é™…æƒ…å†µè°ƒæ•´
 timeout /t 10 /nobreak >nul
 
-:: Ìí¼Ó Anaconda µÄ Scripts Ä¿Â¼µ½ PATH »·¾³±äÁ¿£¬±ÜÃâ conda ÃüÁîÕÒ²»µ½¡£
+:: æ·»åŠ  Anaconda çš„ Scripts ç›®å½•åˆ° PATH ç¯å¢ƒå˜é‡ï¼Œé¿å… conda å‘½ä»¤æ‰¾ä¸åˆ°ã€‚
 set "path=%path%;%anaconda_path%\Scripts"
 
-:: ¼¤»î conda »·¾³²¢ÔËĞĞ open-webui serve (¸Ä½ø)
+:: æ¿€æ´» conda ç¯å¢ƒå¹¶è¿è¡Œ open-webui serve (æ”¹è¿›)
 call "%anaconda_path%\Scripts\activate.bat" open-webui && (
     call open-webui serve 2>&1 || goto :error
 )
@@ -25,7 +25,7 @@ call "%anaconda_path%\Scripts\activate.bat" open-webui && (
 goto :eof
 
 :error
-echo ÔËĞĞ open-webui serve ÃüÁîÊ§°Ü¡£Çë¼ì²é open-webui ÊÇ·ñÒÑ°²×°»òÅäÖÃ¡£
+echo è¿è¡Œ open-webui serve å‘½ä»¤å¤±è´¥ã€‚è¯·æ£€æŸ¥ open-webui æ˜¯å¦å·²å®‰è£…æˆ–é…ç½®ã€‚
 :keep_window_open
 pause
 goto :eof
